@@ -1,7 +1,13 @@
+import React from "react";
+import BarChart from "./components/BarChart";
 import "./App.css";
 
 function App() {
-  return <div className="App">Hi I am new here</div>;
+  return (
+    <div className="App">
+      <BarChart />
+    </div>
+  );
 }
 
 export default App;
