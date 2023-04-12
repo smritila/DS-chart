@@ -1,0 +1,14 @@
+.widget {
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: 200px;
+  width: 200px;
+  margin: 10px 20px;
+}
+
+.bullet {
+  list-style-type: none;
+}
