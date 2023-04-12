@@ -12,3 +12,21 @@
 .bullet {
   list-style-type: none;
 }
+
+.widget h2 {
+  font-size: small;
+  color: black;
+  text-align: left;
+}
+
+.widget p {
+  font-weight: bold;
+  text-align: left;
+}
+
+.bullet li {
+  font-size: 12px;
+  padding: 3px;
+  text-align: left;
+  color: #61dafb;
+}
