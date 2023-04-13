@@ -10,15 +10,10 @@ function App() {
   return (
     <div className="App">
       {/* <BarChart />
-      <DoughnutChart /> 
-      <LineChart />*/}
-      <Widget
-        title="Users"
-        content="4209 +40%"
-        desc="62% New"
-        desc1="23% Inactive"
-        desc2="13% Returning"
-      />
+      <DoughnutChart />
+      <LineChart /> */}
+      <Widget label="Users" number="4,209" percentage="+40%" />
+      <Widget label="Users" number="4,209" percentage="+40%" />
     </div>
   );
 }

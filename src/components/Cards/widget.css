@@ -1,11 +1,10 @@
 .widget {
-  background-color: #f1f1f1;
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 20px;
-  height: 200px;
-  width: 200px;
+  width: 250px;
   margin: 10px 20px;
 }
 
@@ -13,20 +12,21 @@
   list-style-type: none;
 }
 
-.widget h2 {
-  font-size: small;
-  color: black;
+.label {
+  color: #666664;
+  font-size: 12px;
   text-align: left;
+  font-weight: 500;
 }
 
-.widget p {
+.number {
+  font-size: x-large;
+  color: black;
   font-weight: bold;
   text-align: left;
 }
 
-.bullet li {
-  font-size: 12px;
-  padding: 3px;
-  text-align: left;
-  color: #61dafb;
+.percentage {
+  color: green;
+  font-size: small;
 }

@@ -1,15 +1,20 @@
 import React from "react";
+import "./widget.css";
+
+import DoughnutChart from "../DoughnutChart";
 
 const Widget = (props) => {
   return (
     <div className="widget">
-      <h2>{props.title}</h2>
-      <p>{props.content}</p>
-      <ul className="bullet">
-        <li>{props.desc}</li>
-        <li>{props.desc1}</li>
-        <li>{props.desc2}</li>
-      </ul>
+      <p className="label">{props.label}</p>
+
+      <p>
+        <span className="number">{props.number}</span>
+        <span className="percentage">{props.percentage}</span>
+      </p>
+      <div className="stat">
+        <DoughnutChart />
+      </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
+const data = {
   labels: ["Blue", "white"],
   datasets: [
     {
@@ -17,7 +17,7 @@ export const data = {
   ],
 };
 
-export function DoughnutChart() {
+function DoughnutChart() {
   return (
     <Doughnut
       data={data}
