@@ -2,8 +2,8 @@ import React from "react";
 import BarChart from "./components/BarChart";
 import DoughnutChart from "./components/DoughnutChart";
 import LineChart from "./components/LineChart";
-import Widget from "./components/Cards/Widget";
-import "./components/Cards/widget.css";
+import ChartWidget from "./components/Widgets/ChartWidget";
+import "./components/Widgets/widget.css";
 import "./App.css";
 
 function App() {
@@ -12,8 +12,8 @@ function App() {
       {/* <BarChart />
       <DoughnutChart />
       <LineChart /> */}
-      <Widget label="Users" number="4,209" percentage="+40%" />
-      <Widget label="Users" number="4,209" percentage="+40%" />
+      <ChartWidget label="Users" number="4,209" percentage="+40%" />
+      <ChartWidget label="Users" number="4,209" percentage="+40%" />
     </div>
   );
 }
