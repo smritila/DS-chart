@@ -1,5 +1,5 @@
 import React from "react";
-import "./widget.css";
+import "./ChartWidget.css";
 
 import DoughnutChart from "../DoughnutChart";
 

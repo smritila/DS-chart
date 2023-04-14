@@ -25,6 +25,7 @@ const data = {
     },
   ],
 };
+
 const options = {
   responsive: true,
   maintainAspectRatio: false,

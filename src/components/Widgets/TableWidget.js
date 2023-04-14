@@ -1,8 +1,7 @@
 import React from "react";
-import "./widget.css";
+import "./ChartWidget.css";
 
-import DoughnutChart from "../DoughnutChart";
-
+import DataTable from "../DataTable";
 const Widget = (props) => {
   return (
     <div className="widget">
@@ -13,7 +12,7 @@ const Widget = (props) => {
         <span className="percentage">{props.percentage}</span>
       </p>
       <div className="stat">
-        <DoughnutChart />
+        <DataTable />
       </div>
     </div>
   );

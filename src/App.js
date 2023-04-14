@@ -3,7 +3,8 @@ import BarChart from "./components/BarChart";
 import DoughnutChart from "./components/DoughnutChart";
 import LineChart from "./components/LineChart";
 import ChartWidget from "./components/Widgets/ChartWidget";
-import "./components/Widgets/widget.css";
+import TableWidget from "./components/Widgets/TableWidget";
+
 import "./App.css";
 
 function App() {
@@ -12,8 +13,10 @@ function App() {
       {/* <BarChart />
       <DoughnutChart />
       <LineChart /> */}
+
+      {/* <ChartWidget label="Users" number="4,209" percentage="+40%" /> */}
       <ChartWidget label="Users" number="4,209" percentage="+40%" />
-      <ChartWidget label="Users" number="4,209" percentage="+40%" />
+      <TableWidget label="Revenue" number="18,500" percentage="+40%" />
     </div>
   );
 }
