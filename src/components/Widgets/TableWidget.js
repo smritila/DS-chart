@@ -6,13 +6,12 @@ const Widget = (props) => {
   return (
     <div className="widget">
       <p className="label">{props.label}</p>
-
       <p>
         <span className="number">{props.number}</span>
         <span className="percentage">{props.percentage}</span>
       </p>
-      <div className="stat">
-        <DataTable />
+      <div className="stat" style={{ "margin-top": "20px" }}>
+        <DataTable data={props.stat} />
       </div>
     </div>
   );
