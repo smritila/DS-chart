@@ -1,0 +1,26 @@
+.item {
+  color: #66666469;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 500;
+  margin: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+
+  padding: 10px;
+}
+
+.grid-item-label {
+  color: rgb(203, 198, 198);
+  margin: 8px;
+}
+
+.grid-item-value {
+  color: black;
+  font-weight: bold;
+  font-size: 10px;
+  margin: 14px;
+}
