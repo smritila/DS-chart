@@ -1,9 +1,8 @@
 import React from "react";
 import "./DataTable.css";
 
-const DataTable = ({ data }) => {
-  console.log(data);
-  const itemList = data.map((item, index) => {
+const DataTable = ({ list, split }) => {
+  const itemList = list.map((item, index) => {
     return (
       <>
         <div className="grid-item-label">{item.label}</div>
@@ -12,7 +11,12 @@ const DataTable = ({ data }) => {
     );
   });
 
-  return <div className="grid-container">{itemList}</div>;
+  let classNames = ["grid-container"];
+  if (split) {
+    classNames.push("grid-container--split");
+  }
+
+  return <div className={classNames.join(" ")}>{itemList}</div>;
 };
 
 export default DataTable;

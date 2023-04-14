@@ -11,7 +11,7 @@ const Widget = (props) => {
         <span className="percentage">{props.percentage}</span>
       </p>
       <div className="stat" style={{ "margin-top": "20px" }}>
-        <DataTable data={props.stat} />
+        <DataTable list={props.stat} split={props.split} />
       </div>
     </div>
   );

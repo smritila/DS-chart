@@ -12,6 +12,10 @@
   gap: 10px;
 }
 
+.grid-container--split {
+  grid-template-columns: auto auto auto auto;
+}
+
 .grid-item-label {
   color: #666664;
   font-size: 12px;
