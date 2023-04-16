@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <ChartWidget label="Users" number="4,209" percentage="+40%" />
-      <ChartWidget label="Subcriptions" number="1302" percentage="+10%" />
+      <ChartWidget label="Subscriptions" number="1302" percentage="+10%" />
       <TableWidget
         label="Revenue"
         number="18,500"

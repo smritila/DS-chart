@@ -3,7 +3,13 @@ import "./ChartWidget.css";
 
 import DoughnutChart from "../DoughnutChart";
 
-const Widget = (props) => {
+const ChartWidget = (props) => {
+  // const labels = ["New", "Returning", "Inactive"];
+  // const data = [62, 14, 24];
+
+  const labels = ["Trial", "Paid"];
+  const data = [40, 60];
+
   return (
     <div className="widget">
       <p className="label">{props.label}</p>
@@ -11,11 +17,11 @@ const Widget = (props) => {
         <span className="number">{props.number}</span>
         <span className="percentage">{props.percentage}</span>
       </p>
-      <div className="stat">
-        <DoughnutChart />
+      <div>
+        <DoughnutChart labels={labels} data={data} />
       </div>
     </div>
   );
 };
 
-export default Widget;
+export default ChartWidget;
