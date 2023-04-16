@@ -3,19 +3,26 @@ import "./ChartWidget.css";
 
 import DoughnutChart from "../DoughnutChart";
 
-const ChartWidget = (props) => {
-  // const labels = ["New", "Returning", "Inactive"];
-  // const data = [62, 14, 24];
+const ChartWidget = ({ label, number, percentage, stat }) => {
+  /** 
+  stat = [
+    { label: "Paid", value: 40 },
+    { label: "Trial", value: 60 },
+  ];
+  */
 
-  const labels = ["Trial", "Paid"];
-  const data = [40, 60];
+  // const labels = ["Trial", "Paid"];
+  // const data = [40, 60];
+
+  const labels = stat.map((item) => item.label);
+  const data = stat.map((item) => item.value);
 
   return (
     <div className="widget">
-      <p className="label">{props.label}</p>
+      <p className="label">{label}</p>
       <p>
-        <span className="number">{props.number}</span>
-        <span className="percentage">{props.percentage}</span>
+        <span className="number">{number}</span>
+        <span className="percentage">{percentage}</span>
       </p>
       <div>
         <DoughnutChart labels={labels} data={data} />

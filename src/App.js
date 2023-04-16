@@ -5,6 +5,17 @@ import TableWidget from "./components/Widgets/TableWidget";
 import "./App.css";
 
 function App() {
+  const users = [
+    { label: "New", value: 62 },
+    { label: "Returning", value: 13 },
+    { label: "Inctive", value: 23 },
+  ];
+
+  const subscriptions = [
+    { label: "Paid", value: 40 },
+    { label: "Trial", value: 60 },
+  ];
+
   const revenues = [
     { label: "Garments", value: 283 },
     { label: "Construction", value: 283 },
@@ -26,14 +37,27 @@ function App() {
 
   return (
     <div className="App">
-      <ChartWidget label="Users" number="4,209" percentage="+40%" />
-      <ChartWidget label="Subscriptions" number="1302" percentage="+10%" />
+      <ChartWidget
+        label="Users"
+        number="4,209"
+        percentage="+40%"
+        stat={users}
+      />
+
+      <ChartWidget
+        label="Subscriptions"
+        number="1302"
+        percentage="+10%"
+        stat={subscriptions}
+      />
+
       <TableWidget
         label="Revenue"
         number="18,500"
         percentage="+40%"
         stat={revenues}
       />
+
       <TableWidget label="Language" number="9" stat={languages} split={true} />
     </div>
   );

@@ -1,13 +1,13 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./DataTable.css";
 
 const DataTable = ({ list, split }) => {
   const itemList = list.map((item, index) => {
     return (
-      <>
+      <Fragment key={index}>
         <div className="grid-item-label">{item.label}</div>
         <div className="grid-item-value">{item.value}</div>
-      </>
+      </Fragment>
     );
   });
 

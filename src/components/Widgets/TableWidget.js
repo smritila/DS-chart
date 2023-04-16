@@ -2,19 +2,20 @@ import React from "react";
 import "./ChartWidget.css";
 
 import DataTable from "../DataTable";
-const Widget = (props) => {
+
+const TableWidget = ({ label, number, percentage, stat, split }) => {
   return (
     <div className="widget">
-      <p className="label">{props.label}</p>
+      <p className="label">{label}</p>
       <p>
-        <span className="number">{props.number}</span>
-        <span className="percentage">{props.percentage}</span>
+        <span className="number">{number}</span>
+        <span className="percentage">{percentage}</span>
       </p>
-      <div className="stat" style={{ "margin-top": "20px" }}>
-        <DataTable list={props.stat} split={props.split} />
+      <div className="stat">
+        <DataTable list={stat} split={split} />
       </div>
     </div>
   );
 };
 
-export default Widget;
+export default TableWidget;
