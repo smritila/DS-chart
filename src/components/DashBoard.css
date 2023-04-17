@@ -1,0 +1,17 @@
+.DashBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.dashboard__widget--large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.dashboard__widget--small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
