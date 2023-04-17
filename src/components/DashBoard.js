@@ -35,6 +35,24 @@ function DashBoard() {
     { label: "Kannada", value: 283 },
   ];
 
+  const summary = [
+    { label: "Work", value: 100 },
+    { label: "Document", value: 170 },
+    { label: "Cash Transaction", value: 250 },
+    { label: "Remainders", value: 350 },
+    { label: "Broadcast", value: 425 },
+  ];
+
+  const activity = [
+    { label: "Garments", value: 139 },
+    { label: "Construction", value: 283 },
+    { label: "Pharmacy", value: 782 },
+    { label: "Others", value: 1923 },
+    { label: "Garments", value: 139 },
+    { label: "Construction", value: 283 },
+    { label: "Pharmacy", value: 782 },
+    { label: "Others", value: 1923 },
+  ];
   return (
     <div className="DashBoard">
       <div class="dashboard__widget--small">
@@ -75,10 +93,12 @@ function DashBoard() {
       </div>
 
       <div class="dashboard__widget--large">
-        <ChartWidget label="Total summary" stat={subscriptions} type="bar" />
+        <ChartWidget label="Total summary" stat={summary} type="bar" />
       </div>
 
-      <div class="dashboard__widget--large">Widget 6</div>
+      <div class="dashboard__widget--large">
+        <TableWidget label="Activity" stat={activity} split={true} size="lg" />
+      </div>
     </div>
   );
 }

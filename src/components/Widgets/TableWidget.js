@@ -3,7 +3,7 @@ import "./ChartWidget.css";
 
 import DataTable from "../DataTable";
 
-const TableWidget = ({ label, number, percentage, stat, split }) => {
+const TableWidget = ({ label, number, percentage, stat, split, size }) => {
   return (
     <div className="widget">
       <p className="label">{label}</p>
@@ -12,7 +12,7 @@ const TableWidget = ({ label, number, percentage, stat, split }) => {
         <span className="percentage">{percentage}</span>
       </p>
       <div className="stat">
-        <DataTable list={stat} split={split} />
+        <DataTable list={stat} split={split} size={size} />
       </div>
     </div>
   );

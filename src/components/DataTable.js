@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import "./DataTable.css";
 
-const DataTable = ({ list, split }) => {
+const DataTable = ({ list, split, size }) => {
   const itemList = list.map((item, index) => {
     return (
       <Fragment key={index}>
@@ -14,6 +14,9 @@ const DataTable = ({ list, split }) => {
   let classNames = ["grid-container"];
   if (split) {
     classNames.push("grid-container--split");
+  }
+  if (size == "lg") {
+    classNames.push("grid-container--lg");
   }
 
   return <div className={classNames.join(" ")}>{itemList}</div>;

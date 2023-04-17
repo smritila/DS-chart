@@ -1,10 +1,10 @@
-.item {
+/* .item {
   color: #66666469;
   font-size: 12px;
   text-align: left;
   font-weight: 500;
   margin: 10px;
-}
+} */
 
 .grid-container {
   display: grid;
@@ -16,6 +16,10 @@
   grid-template-columns: auto auto auto auto;
 }
 
+.grid-container--lg {
+  gap: 20px;
+}
+
 .grid-item-label {
   color: #666664;
   font-size: 12px;
@@ -25,6 +29,14 @@
   color: black;
   font-weight: bold;
   font-size: 10px;
+}
+
+.grid-container--lg > .grid-item-label {
+  font-size: 16px;
+}
+
+.grid-container--lg > .grid-item-value {
+  font-size: 14px;
 }
 
 .stat {
