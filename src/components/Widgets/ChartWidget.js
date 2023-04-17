@@ -2,8 +2,9 @@ import React from "react";
 import "./ChartWidget.css";
 
 import DoughnutChart from "../DoughnutChart";
+import VerticalBarChart from "../VerticalBarChart";
 
-const ChartWidget = ({ label, number, percentage, stat }) => {
+const ChartWidget = ({ label, number, percentage, stat, type }) => {
   /** 
   stat = [
     { label: "Paid", value: 40 },
@@ -17,6 +18,8 @@ const ChartWidget = ({ label, number, percentage, stat }) => {
   const labels = stat.map((item) => item.label);
   const data = stat.map((item) => item.value);
 
+  const ChartComponent = type === "doughnut" ? DoughnutChart : VerticalBarChart;
+
   return (
     <div className="widget">
       <p className="label">{label}</p>
@@ -25,7 +28,7 @@ const ChartWidget = ({ label, number, percentage, stat }) => {
         <span className="percentage">{percentage}</span>
       </p>
       <div>
-        <DoughnutChart labels={labels} data={data} />
+        <ChartComponent labels={labels} data={data} />
       </div>
     </div>
   );
