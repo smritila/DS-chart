@@ -6,7 +6,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <DashBoard />
+      {/* <DashBoard /> */}
+      <h1 className="text-6xl">Hello, Tailwind css in React!</h1>
     </div>
   );
 }
