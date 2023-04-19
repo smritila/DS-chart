@@ -1,7 +1,7 @@
 import React from "react";
 
-import ChartWidget from "./Widgets/ChartWidget";
-import TableWidget from "./Widgets/TableWidget";
+import ChartWidget from "../components/Widgets/ChartWidget";
+import ListWidget from "../components/Widgets/ListWidget";
 import "./DashBoard.css";
 
 function DashBoard() {
@@ -76,7 +76,7 @@ function DashBoard() {
       </div>
 
       <div class="dashboard__widget--small">
-        <TableWidget
+        <ListWidget
           label="Revenue"
           number="18,500"
           percentage="+40%"
@@ -84,7 +84,7 @@ function DashBoard() {
         />
       </div>
       <div class="dashboard__widget--small">
-        <TableWidget
+        <ListWidget
           label="Languages"
           number="9"
           stat={languages}
@@ -97,7 +97,7 @@ function DashBoard() {
       </div>
 
       <div class="dashboard__widget--large">
-        <TableWidget label="Activity" stat={activity} split={true} size="lg" />
+        <ListWidget label="Activity" stat={activity} split={true} size="lg" />
       </div>
     </div>
   );

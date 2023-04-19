@@ -1,8 +1,8 @@
 import React from "react";
 import "./ChartWidget.css";
 
-import DoughnutChart from "../DoughnutChart";
-import VerticalBarChart from "../VerticalBarChart";
+import DoughnutChart from "../charts/DoughnutChart";
+import VerticalBarChart from "../charts/VerticalBarChart";
 
 const ChartWidget = ({ label, number, percentage, stat, type }) => {
   /** 

@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
-import "./DataTable.css";
+import "./CustomList.css";
 
-const DataTable = ({ list, split, size }) => {
+const CustomList = ({ list, split, size }) => {
   const itemList = list.map((item, index) => {
     return (
       <Fragment key={index}>
@@ -22,4 +22,4 @@ const DataTable = ({ list, split, size }) => {
   return <div className={classNames.join(" ")}>{itemList}</div>;
 };
 
-export default DataTable;
+export default CustomList;
