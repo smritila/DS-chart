@@ -1,9 +1,14 @@
 import React from "react";
-import DashBoard from "./components/DashBoard";
-// import DashBoard from "./components/DashBoard";
+
+// import DashBoard from "./features/DashBoard";
+import Report from "./features/Report";
 
 function App() {
-  return <div>{/* <DashBoard /> */}</div>;
+  return (
+    <div>
+      <Report />
+    </div>
+  );
 }
 
 export default App;
