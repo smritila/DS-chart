@@ -4,9 +4,9 @@ import "tailwindcss/tailwind.css";
 
 const columns = [
   {
-    name: "Users",
+    // name: "Users",
     name: "All Business Type",
-    selector: (row) => row.businessType,
+    selector: (row) => row.AllBusinessType,
   },
   {
     name: "Employees",
@@ -40,31 +40,29 @@ const columns = [
 
 const data = [
   {
-    businessType: "MacDonalds",
+    AllBusinessType: "MacDonalds",
     employees: 10,
     timeSpent: "02 Hrs",
     activity: 35,
     subscription: "paid",
   },
 
-  // timeSpent: { admin: "02 hrs", staff: "08 hrs" },
-
   {
-    businessType: "Tesla",
+    AllBusinessType: "Tesla",
     employees: 9387,
     timeSpent: "10 Hrs",
     activity: 35,
     subscription: "Trial",
   },
   {
-    businessType: "GM",
+    AllBusinessType: "GM",
     employees: 402,
     timeSpent: "48 min",
     activity: 35,
     subscription: "paid",
   },
   {
-    businessType: "AARP",
+    AllBusinessType: "AARP",
     employees: 89,
     timeSpent: "90 min",
     activity: 35,
@@ -72,7 +70,7 @@ const data = [
   },
 
   {
-    businessType: "Disney",
+    AllBusinessType: "Disney",
     employees: 276,
     timeSpent: "67 min",
     activity: 35,
@@ -80,7 +78,7 @@ const data = [
   },
 
   {
-    businessType: "Prime Theraputist",
+    AllBusinessType: "Prime Theraputist",
     employees: 1098,
     timeSpent: "02 Hrs",
     activity: 35,
@@ -88,7 +86,7 @@ const data = [
   },
 
   {
-    businessType: "Match.com",
+    AllBusinessType: "Match.com",
     employees: 4289,
     timeSpent: "10 Hrs",
     activity: 35,
@@ -96,7 +94,7 @@ const data = [
   },
 
   {
-    businessType: "Chevy",
+    AllBusinessType: "Chevy",
     employees: 1928,
     timeSpent: "02 Hrs",
     activity: 35,
@@ -104,7 +102,7 @@ const data = [
   },
 
   {
-    businessType: "GM",
+    AllBusinessType: "GM",
     employees: 640,
     timeSpent: "02 Hrs",
     activity: 35,
@@ -146,7 +144,7 @@ function CustomDataTable() {
 
   return (
     <div className="p-4 font-sans">
-      <h1 className="text-2xl font-bold mb-4">Users</h1>
+      <h1 className="text-md font-sans mb-4">Users</h1>
 
       <input
         type="text"
