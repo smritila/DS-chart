@@ -4,6 +4,7 @@ import "tailwindcss/tailwind.css";
 
 const columns = [
   {
+    name: "Users",
     name: "All Business Type",
     selector: (row) => row.businessType,
   },
@@ -136,6 +137,8 @@ function CustomDataTable() {
 
   return (
     <div className="p-4 font-sans">
+      <h1 className="text-2xl font-bold mb-4">Users</h1>
+
       <input
         type="text"
         placeholder="Filter..."
