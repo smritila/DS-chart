@@ -4,134 +4,103 @@ import "tailwindcss/tailwind.css";
 
 const columns = [
   {
-    name: "Title",
-    selector: (row) => row.title,
+    name: "All Business Type",
+    selector: (row) => row.businessType,
   },
   {
-    name: "Director",
-    selector: (row) => row.director,
+    name: "Employees",
+    selector: (row) => row.employees,
   },
+
   {
-    name: "Year",
-    selector: (row) => row.year,
+    name: "Time Spent",
+    selector: (row) => row.timeSpent,
+  },
+
+  {
+    name: "Activity",
+    selector: (row) => row.activity,
+  },
+
+  {
+    name: "Subscription",
+    selector: (row) => row.subscription,
   },
 ];
 
 const data = [
   {
-    id: 1,
-    title: "Beetlejuice",
-    year: "1988",
-    director: "Christopher",
+    businessType: "MacDonalds",
+    employees: 10,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "paid",
+  },
+
+  // timeSpent: { admin: "02 hrs", staff: "08 hrs" },
+
+  {
+    businessType: "Tesla",
+    employees: 9387,
+    timeSpent: "10 Hrs",
+    activity: 35,
+    subscription: "Trial",
   },
   {
-    id: 2,
-    title: "Ghostbusters",
-    year: "1984",
-    director: "Iman",
+    businessType: "GM",
+    employees: 402,
+    timeSpent: "48 min",
+    activity: 35,
+    subscription: "paid",
   },
   {
-    id: 3,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
+    businessType: "AARP",
+    employees: 89,
+    timeSpent: "90 min",
+    activity: 35,
+    subscription: "Trial",
   },
+
   {
-    id: 4,
-    title: "city of God",
-    director: "Punam",
-    year: "1987",
+    businessType: "Disney",
+    employees: 276,
+    timeSpent: "67 min",
+    activity: 35,
+    subscription: "paid",
   },
+
   {
-    id: 5,
-    title: "skg",
-    director: "Punam",
-    year: "1987",
+    businessType: "Prime Theraputist",
+    employees: 1098,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "trial",
   },
+
   {
-    id: 6,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
+    businessType: "Match.com",
+    employees: 4289,
+    timeSpent: "10 Hrs",
+    activity: 35,
+    subscription: "Trial",
   },
+
   {
-    id: 7,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
+    businessType: "Chevy",
+    employees: 1928,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "paid",
   },
+
   {
-    id: 8,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
+    businessType: "GM",
+    employees: 640,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "trial",
   },
-  {
-    id: 9,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 10,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 11,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 12,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 13,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 14,
-    title: "Shogun",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 15,
-    title: "spollight",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 16,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 17,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 18,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
-  {
-    id: 19,
-    title: "Ghostbusters",
-    director: "Punam",
-    year: "1987",
-  },
+  // Add more objects as needed
 ];
 
 function CustomDataTable() {
@@ -176,7 +145,7 @@ function CustomDataTable() {
       <DataTable
         columns={columns}
         data={paginatedData}
-        selectableRows
+        // selectableRows
         pagination
         paginationServer
         paginationTotalRows={filteredData.length}
