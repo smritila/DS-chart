@@ -26,6 +26,15 @@ const columns = [
   {
     name: "Subscription",
     selector: (row) => row.subscription,
+    cell: (row) => (
+      <span
+        className={
+          row.subscription === "paid" ? "text-green-500" : "text-red-500"
+        }
+      >
+        {row.subscription}
+      </span>
+    ),
   },
 ];
 
@@ -148,7 +157,6 @@ function CustomDataTable() {
       <DataTable
         columns={columns}
         data={paginatedData}
-        // selectableRows
         pagination
         paginationServer
         paginationTotalRows={filteredData.length}
