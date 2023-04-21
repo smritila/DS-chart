@@ -4,27 +4,33 @@ import "tailwindcss/tailwind.css";
 
 const columns = [
   {
-    // name: "Users",
-    name: "All Business Type",
+    name: (
+      <span className="bg-gray-100 px-2 py-1 rounded-md">
+        All Business Type
+      </span>
+    ),
     selector: (row) => row.AllBusinessType,
+    cell: (row) => <span className="font-bold">{row.AllBusinessType}</span>,
   },
   {
-    name: "Employees",
+    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Employees</span>,
     selector: (row) => row.employees,
   },
 
   {
-    name: "Time Spent",
+    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Time Spent</span>,
     selector: (row) => row.timeSpent,
   },
 
   {
-    name: "Activity",
+    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Activity</span>,
     selector: (row) => row.activity,
   },
 
   {
-    name: "Subscription",
+    name: (
+      <span className="bg-gray-100 px-2 py-1 rounded-md">Subscription</span>
+    ),
     selector: (row) => row.subscription,
     cell: (row) => (
       <span
@@ -108,13 +114,13 @@ const data = [
     activity: 35,
     subscription: "trial",
   },
-  // Add more objects as needed
 ];
 
 function CustomDataTable() {
   return (
     <DataTable
-      className="rounded-lg w-full p-4"
+      className="border-gray-300 m-4"
+      style={{ borderRadius: "10rem" }}
       columns={columns}
       data={data}
     ></DataTable>
