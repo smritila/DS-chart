@@ -5,7 +5,7 @@ import "tailwindcss/tailwind.css";
 const columns = [
   {
     name: (
-      <span className="bg-gray-100 px-2 py-1 rounded-md">
+      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
         All Business Type
       </span>
     ),
@@ -13,23 +13,40 @@ const columns = [
     cell: (row) => <span className="font-bold">{row.AllBusinessType}</span>,
   },
   {
-    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Employees</span>,
+    name: (
+      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
+        Employees
+      </span>
+    ),
     selector: (row) => row.employees,
-  },
-
-  {
-    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Time Spent</span>,
-    selector: (row) => row.timeSpent,
-  },
-
-  {
-    name: <span className="bg-gray-100 px-2 py-1 rounded-md">Activity</span>,
-    selector: (row) => row.activity,
+    cell: (row) => <span className="text-gray-500">{row.employees}</span>,
   },
 
   {
     name: (
-      <span className="bg-gray-100 px-2 py-1 rounded-md">Subscription</span>
+      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
+        Time Spent
+      </span>
+    ),
+    selector: (row) => row.timeSpent,
+    cell: (row) => <span className="text-gray-500">{row.timeSpent}</span>,
+  },
+
+  {
+    name: (
+      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
+        Activity
+      </span>
+    ),
+    selector: (row) => row.activity,
+    cell: (row) => <span className="text-gray-600">{row.activity}</span>,
+  },
+
+  {
+    name: (
+      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
+        Subscription
+      </span>
     ),
     selector: (row) => row.subscription,
     cell: (row) => (
