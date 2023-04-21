@@ -1,7 +1,6 @@
 import React from "react";
 
 import CustomDataTable from "../components/CustomDataTable";
-import Sidebar from "../components/Sidebar";
 
 const columns1 = [
   {
@@ -140,7 +139,77 @@ const data1 = [
     activity: 35,
     subscription: "trial",
   },
+  {
+    allBusinessType: "MacDonalds",
+    employees: 10,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "paid",
+    // more data as needed
+  },
 
+  {
+    allBusinessType: "Tesla",
+    employees: 9387,
+    timeSpent: "10 Hrs",
+    activity: 35,
+    subscription: "Trial",
+  },
+
+  {
+    allBusinessType: "GM",
+    employees: 402,
+    timeSpent: "48 min",
+    activity: 35,
+    subscription: "paid",
+  },
+  {
+    allBusinessType: "AARP",
+    employees: 89,
+    timeSpent: "90 min",
+    activity: 35,
+    subscription: "Trial",
+  },
+
+  {
+    allBusinessType: "Disney",
+    employees: 276,
+    timeSpent: "67 min",
+    activity: 35,
+    subscription: "paid",
+  },
+
+  {
+    allBusinessType: "Prime Theraputist",
+    employees: 1098,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "trial",
+  },
+
+  {
+    allBusinessType: "Match.com",
+    employees: 4289,
+    timeSpent: "10 Hrs",
+    activity: 35,
+    subscription: "Trial",
+  },
+
+  {
+    allBusinessType: "Chevy",
+    employees: 1928,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "paid",
+  },
+
+  {
+    allBusinessType: "GM",
+    employees: 640,
+    timeSpent: "02 Hrs",
+    activity: 35,
+    subscription: "trial",
+  },
   // more data as needed
 ];
 
@@ -153,14 +222,7 @@ const data2 = [
 ];
 
 function Report() {
-  return (
-    <div className="bg-gray-100 font-sans">
-      <div className="flex flex-row">
-        <Sidebar />
-        <CustomDataTable columns={columns1} data={data1} />
-      </div>
-    </div>
-  );
+  return <CustomDataTable columns={columns1} data={data1} />;
 }
 
 export default Report;
