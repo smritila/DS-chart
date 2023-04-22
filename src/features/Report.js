@@ -1,6 +1,6 @@
 import React from "react";
 
-import CustomDataTable from "../components/CustomDataTable";
+import CustomDataTable from "../components/table/CustomDataTable";
 
 const columns1 = [
   {
