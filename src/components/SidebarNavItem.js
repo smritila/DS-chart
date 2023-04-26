@@ -1,29 +1,30 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavLink } from "react-router-dom";
 
-function SidebarNavItem({ name, icon, isActive }) {
-  const textColorClass = isActive ? "text-blue-700" : "text-black";
-  const iconClasses = [textColorClass, "text-sm", "mr-3"];
-
-  let buttonClasses = [
-    "w-full",
-    "p-3",
-    "mb-3",
-    "font-bold",
-    "text-sm",
-    "text-left",
-    textColorClass,
-  ];
-  if (isActive) {
-    buttonClasses = [...buttonClasses, "bg-blue-100", "rounded"];
+function SidebarNavItem({ name, icon, path }) {
+  function getButtonClasses({ isActive }) {
+    const textColorClass = isActive ? "text-blue-700" : "text-black";
+    let buttonClasses = [
+      "block",
+      "p-3",
+      "mb-3",
+      "font-bold",
+      "text-sm",
+      "text-left",
+      textColorClass,
+    ];
+    if (isActive) {
+      buttonClasses = [...buttonClasses, "bg-blue-100", "rounded"];
+    }
+    return buttonClasses.join(" ");
   }
 
-  //   console.log(buttonClasses.join(" "));
   return (
-    <button className={buttonClasses.join(" ")}>
-      <FontAwesomeIcon icon={icon} className={iconClasses.join(" ")} />
+    <NavLink to={path} className={getButtonClasses}>
+      <FontAwesomeIcon icon={icon} className="text-sm mr-3" />
       {name}
-    </button>
+    </NavLink>
   );
 }
 

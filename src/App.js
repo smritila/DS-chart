@@ -14,8 +14,9 @@ function App() {
           <h1 className="text-xl font-bold">Loreum Ipsum</h1>
           <hr className="border-t-1 my-5 border-gray-300" />
           <Routes>
-            <Route path="/Dashboard" element={<DashBoard />} />
-            <Route path="/Report" element={<Report />} />
+            <Route path="/dashboard" element={<DashBoard />} />
+            <Route path="/report" element={<Report />} />
+            {/* <Route path="/" element={<DashBoard />} /> */}
           </Routes>
         </main>
       </div>
