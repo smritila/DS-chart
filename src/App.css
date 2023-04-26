@@ -9,3 +9,7 @@
 .ml-sidebar {
   margin-left: calc(1 / 6 * 100%); /* width of Sidebar */
 }
+.btn {
+  padding: 16px;
+  background-color: aqua;
+}
