@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import SidebarNavItem from "./SidebarNavItem";
 
-import { faBuilding, faChartLine } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBuilding,
+  faChartLine,
+  faServer,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Sidebar() {
   const [isBusinessSpecific, setIsBusinessSpecific] = useState(true);
@@ -15,6 +19,7 @@ function Sidebar() {
         icon={faBuilding}
         path="/dashboard"
       />
+      {/* <SidebarNavItem name="API Test" icon={faServer} path="/api-test" /> */}
     </div>
   );
 }

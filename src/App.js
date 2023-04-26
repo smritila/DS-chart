@@ -4,7 +4,7 @@ import "./App.css";
 import Report from "./features/Report";
 import Sidebar from "./components/Sidebar";
 import DashBoard from "./features/DashBoard";
-import ApiTest from "./features/ApiTest";
+// import ApiTest from "./features/ApiTest";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path="/dashboard" element={<DashBoard />} />
             <Route path="/report" element={<Report />} />
             {/* <Route path="/" element={<DashBoard />} /> */}
-            <Route path="/apitest" element={<ApiTest />} />
+            {/* <Route path="/api-test" element={<ApiTest />} /> */}
           </Routes>
         </main>
       </div>

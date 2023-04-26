@@ -13,11 +13,10 @@ function ApiTest() {
   };
   return (
     <div>
-      Hello Youtube
       <button className="btn" onClick={getJoke}>
         Get Joke Right Now
       </button>
-      {joke}
+      <p>{joke}</p>
     </div>
   );
 }

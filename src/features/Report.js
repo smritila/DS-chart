@@ -4,56 +4,29 @@ import CustomDataTable from "../components/table/CustomDataTable";
 
 const columns1 = [
   {
-    name: (
-      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-        All Business Type
-      </span>
-    ),
-    selector: (row) => row.allBusinessType,
+    name: "All Business Type",
     cell: (row) => (
       <div>
         <span className="font-bold block">{row.allBusinessType}</span>
         <span className="text-gray-400">Business Type</span>
       </div>
     ),
+    isCustomCell: true,
   },
   {
-    name: (
-      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-        Employees
-      </span>
-    ),
-    selector: (row) => row.employees,
-    cell: (row) => <span className="text-gray-500">{row.employees}</span>,
+    name: "Employees",
+    key: "employees",
   },
-
   {
-    name: (
-      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-        Time Spent
-      </span>
-    ),
-    selector: (row) => row.timeSpent,
-    cell: (row) => <span className="text-gray-500">{row.timeSpent}</span>,
+    name: "Time Spent",
+    key: "timeSpent",
   },
-
   {
-    name: (
-      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-        Activity
-      </span>
-    ),
-    selector: (row) => row.activity,
-    cell: (row) => <span className="text-gray-600">{row.activity}</span>,
+    name: "Activity",
+    key: "activity",
   },
-
   {
-    name: (
-      <span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md">
-        Subscription
-      </span>
-    ),
-    selector: (row) => row.subscription,
+    name: "Subscription",
     cell: (row) => (
       <span
         className={
@@ -63,6 +36,7 @@ const columns1 = [
         {row.subscription}
       </span>
     ),
+    isCustomCell: true,
   },
   // more columns as needed
 ];
@@ -211,14 +185,6 @@ const data1 = [
     subscription: "trial",
   },
   // more data as needed
-];
-
-const columns2 = [
-  // different columns as needed
-];
-
-const data2 = [
-  // different data as needed
 ];
 
 function Report() {
