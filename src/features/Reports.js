@@ -3,6 +3,7 @@ import React from "react";
 import ChartWidget from "../components/Widgets/ChartWidget";
 import ListWidget from "../components/Widgets/ListWidget";
 import "./DashBoard.css";
+import { faCaretUp, faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 function DashBoard() {
   const users = [
@@ -17,22 +18,57 @@ function DashBoard() {
   ];
 
   const revenues = [
-    { label: "Garments", value: 283 },
-    { label: "Construction", value: 283 },
-    { label: "Pharmacy", value: 283 },
-    { label: "Others", value: 283 },
+    {
+      label: "May",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "April",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "Feb",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "Earlier",
+      value: "$283",
+      icon: faCaretDown,
+      iconClass: "text-orange-500",
+    },
   ];
 
-  const languages = [
-    { label: "English", value: 283 },
-    { label: "Hindi", value: 283 },
-    { label: "Nepali", value: 283 },
-    { label: "Odia", value: 283 },
-    { label: "telegu", value: 283 },
-    { label: "Bengali", value: 283 },
-    { label: "Tamil", value: 283 },
-    { label: "Gujrati", value: 283 },
-    { label: "Kannada", value: 283 },
+  const scans = [
+    {
+      label: "May",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "April",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "Feb",
+      value: "$283",
+      icon: faCaretUp,
+      iconClass: "text-blue-600",
+    },
+    {
+      label: "Earlier",
+      value: "$283",
+      icon: faCaretDown,
+      iconClass: "text-orange-500",
+    },
   ];
 
   const summary = [
@@ -78,27 +114,27 @@ function DashBoard() {
       <div class="dashboard__widget--small">
         <ListWidget
           label="Revenue"
-          number="18,500"
+          number="$18,500"
           percentage="+40%"
           stat={revenues}
         />
       </div>
       <div class="dashboard__widget--small">
         <ListWidget
-          label="Languages"
-          number="9"
-          stat={languages}
-          split={true}
+          label="Total successful scans"
+          number="530"
+          stat={scans}
+          percentage="+40%"
         />
       </div>
 
-      <div class="dashboard__widget--large">
+      {/* <div class="dashboard__widget--large">
         <ChartWidget label="Total summary" stat={summary} type="bar" />
-      </div>
+      </div> */}
 
-      <div class="dashboard__widget--large">
+      {/* <div class="dashboard__widget--large">
         <ListWidget label="Activity" stat={activity} split={true} size="lg" />
-      </div>
+      </div> */}
     </div>
   );
 }

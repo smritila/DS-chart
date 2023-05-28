@@ -24,7 +24,7 @@ const ChartWidget = ({ label, number, percentage, stat, type }) => {
     <div className="widget">
       <p className="label">{label}</p>
       <p>
-        <span className="number">{number}</span>
+        <span className="number mr-2">{number}</span>
         <span className="percentage">{percentage}</span>
       </p>
       <div>
