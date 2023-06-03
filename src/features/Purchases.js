@@ -1,29 +1,22 @@
 import React from "react";
-
 import CustomDataTable from "../components/table/CustomDataTable";
 
-const columns1 = [
+const columns = [
   {
-    name: "All Business Type",
-    cell: (row) => (
-      <div>
-        <span className="font-bold block">{row.allBusinessType}</span>
-        <span className="text-gray-400">Business Type</span>
-      </div>
-    ),
-    isCustomCell: true,
+    name: "Email",
+    key: "email",
   },
   {
-    name: "Employees",
-    key: "employees",
+    name: "Purachase Date",
+    key: "purchase date",
   },
   {
-    name: "Time Spent",
-    key: "timeSpent",
+    name: "Direct Scale Customer Id",
+    key: "directScaleCustomerId",
   },
   {
-    name: "Activity",
-    key: "activity",
+    name: "Last Login",
+    key: "lastLogin",
   },
   {
     name: "Subscription",
@@ -38,157 +31,23 @@ const columns1 = [
     ),
     isCustomCell: true,
   },
-  // more columns as needed
 ];
 
-const data1 = [
-  {
-    allBusinessType: "MacDonalds",
-    employees: 10,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "paid",
-    // more data as needed
-  },
-
-  {
-    allBusinessType: "Tesla",
-    employees: 9387,
-    timeSpent: "10 Hrs",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "GM",
-    employees: 402,
-    timeSpent: "48 min",
-    activity: 35,
-    subscription: "paid",
-  },
-  {
-    allBusinessType: "AARP",
-    employees: 89,
-    timeSpent: "90 min",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "Disney",
-    employees: 276,
-    timeSpent: "67 min",
-    activity: 35,
-    subscription: "paid",
-  },
-
-  {
-    allBusinessType: "Prime Theraputist",
-    employees: 1098,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "trial",
-  },
-
-  {
-    allBusinessType: "Match.com",
-    employees: 4289,
-    timeSpent: "10 Hrs",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "Chevy",
-    employees: 1928,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "paid",
-  },
-
-  {
-    allBusinessType: "GM",
-    employees: 640,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "trial",
-  },
-  {
-    allBusinessType: "MacDonalds",
-    employees: 10,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "paid",
-    // more data as needed
-  },
-
-  {
-    allBusinessType: "Tesla",
-    employees: 9387,
-    timeSpent: "10 Hrs",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "GM",
-    employees: 402,
-    timeSpent: "48 min",
-    activity: 35,
-    subscription: "paid",
-  },
-  {
-    allBusinessType: "AARP",
-    employees: 89,
-    timeSpent: "90 min",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "Disney",
-    employees: 276,
-    timeSpent: "67 min",
-    activity: 35,
-    subscription: "paid",
-  },
-
-  {
-    allBusinessType: "Prime Theraputist",
-    employees: 1098,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "trial",
-  },
-
-  {
-    allBusinessType: "Match.com",
-    employees: 4289,
-    timeSpent: "10 Hrs",
-    activity: 35,
-    subscription: "Trial",
-  },
-
-  {
-    allBusinessType: "Chevy",
-    employees: 1928,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "paid",
-  },
-
-  {
-    allBusinessType: "GM",
-    employees: 640,
-    timeSpent: "02 Hrs",
-    activity: 35,
-    subscription: "trial",
-  },
-  // more data as needed
-];
+// Generate 20 records
+const records = [];
+for (let i = 0; i < 20; i++) {
+  const record = {
+    email: `user${i + 1}@example.com`,
+    "purchase date": `2023-06-${i + 1}`,
+    directScaleCustomerId: i + 1000,
+    lastLogin: `2023-06-${i + 1} 10:00 AM`,
+    subscription: i % 2 === 0 ? "paid" : "free",
+  };
+  records.push(record);
+}
 
 function Report() {
-  return <CustomDataTable columns={columns1} data={data1} />;
+  return <CustomDataTable columns={columns} data={records} />;
 }
 
 export default Report;
