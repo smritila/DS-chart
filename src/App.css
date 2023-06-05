@@ -13,3 +13,7 @@
   padding: 16px;
   background-color: aqua;
 }
+
+button.ant-btn-primary {
+  background-color: #1677ff;
+}

@@ -6,6 +6,7 @@ import Purchases from "./features/Purchases";
 import Sidebar from "./components/Sidebar";
 import { Button, Modal } from "antd";
 import { useState } from "react";
+import AddEditAppLink from "./components/AddEditAppLink";
 
 // import ApiTest from "./features/ApiTest";
 
@@ -29,17 +30,15 @@ function App() {
             <h1 className="text-xl font-bold">Loreum Ipsum</h1>
             <>
               <Button type="primary" onClick={showModal}>
-                Open Modal
+                Update App Link
               </Button>
               <Modal
-                title="Basic Modal"
+                title="App Link Details"
                 open={isModalOpen}
                 onOk={handleOk}
                 onCancel={handleCancel}
               >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <AddEditAppLink />
               </Modal>
             </>
           </div>
