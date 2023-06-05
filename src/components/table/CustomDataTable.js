@@ -3,7 +3,7 @@ import DataTable from "react-data-table-component";
 import "tailwindcss/tailwind.css";
 import CustomDataTableHeader from "./CustomDataTableHeader";
 
-function CustomDataTable({ columns, data }) {
+function CustomDataTable({ columns, data, pending }) {
   const modifiedColumns = columns.map((column) => {
     if (column.isCustomCell) {
       return {
@@ -28,7 +28,12 @@ function CustomDataTable({ columns, data }) {
 
   const tableHeader = <CustomDataTableHeader />;
   return (
-    <DataTable title={tableHeader} columns={modifiedColumns} data={data} />
+    <DataTable
+      title={tableHeader}
+      columns={modifiedColumns}
+      data={data}
+      progressPending={pending}
+    />
   );
 }
 

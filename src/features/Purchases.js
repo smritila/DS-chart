@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+//import axios from "../axiosConfig";
+
 import CustomDataTable from "../components/table/CustomDataTable";
 
 const columns = [
@@ -46,7 +48,32 @@ for (let i = 0; i < 20; i++) {
   records.push(record);
 }
 
+// const userColumns = [
+//   {
+//     name: "Batch ID",
+//     key: "BatchId",
+//   },
+//   {
+//     name: "Email ID",
+//     key: "Email",
+//   },
+// ];
+
 function Report() {
+  // const [allUsers, setAllUsers] = useState([]);
+  // const [fetching, setFetching] = useState(false);
+
+  // useEffect(() => {
+  //   //fetch user list
+  //   getAllUsers();
+  // }, []);
+
+  // async function getAllUsers() {
+  //   const response = await axios.get("totalUsers");
+  //   const users = response.data.users;
+  //   setAllUsers(users);
+  // }
+
   return <CustomDataTable columns={columns} data={records} />;
 }
 
