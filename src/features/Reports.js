@@ -111,14 +111,14 @@ function DashBoard() {
         />
       </div>
 
-      <div class="dashboard__widget--small">
+      {/* <div class="dashboard__widget--small">
         <ListWidget
           label="Revenue"
           number="$18,500"
           percentage="+40%"
           stat={revenues}
         />
-      </div>
+      </div> */}
       <div class="dashboard__widget--small">
         <ListWidget
           label="Total successful scans"
